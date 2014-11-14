@@ -1,5 +1,7 @@
 package com.ryan;
 
+import com.company.cramCalc;
+
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -11,7 +13,7 @@ import java.net.UnknownHostException;
 
 
 public class playerMain {
-	
+	public static cramCalc calculation;
 	// The client socket
 		private static Socket clientSocket = null;
 		// The output stream
@@ -277,7 +279,7 @@ public class playerMain {
 			////////////////////////////////////////////////////////
 			
 			System.out.println("Enter move (for testing, to be replaced with algorithm):");
-			playerMove = inputLine.readLine(); // for now move is just user input, for testing, replace this with your algorithm when ready
+			playerMove = calculation.move(boardMatrix);//inputLine.readLine(); // for now move is just user input, for testing, replace this with your algorithm when ready
 			
 			
 			
